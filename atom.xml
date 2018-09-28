@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>KillerKit</title>
   
   
   <link href="/basin.github.io/atom.xml" rel="self"/>
   
-  <link href="https://basinmax.github.io/"/>
+  <link href="https://basinmax.github.io/basin.github.io/"/>
   <updated>2018-09-28T08:50:26.916Z</updated>
-  <id>https://basinmax.github.io/</id>
+  <id>https://basinmax.github.io/basin.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>wangHc</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://basinmax.github.io/2018/09/28/hello-world/"/>
-    <id>https://basinmax.github.io/2018/09/28/hello-world/</id>
+    <link href="https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/</id>
     <published>2018-09-28T08:50:26.915Z</published>
     <updated>2018-09-28T08:50:26.916Z</updated>
     
