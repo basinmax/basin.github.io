@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/basin.github.io/atom.xml" rel="self"/>
   
-  <link href="https://basinmax.github.io/basin.github.io/"/>
+  <link href="https://basinmax.github.io/"/>
   <updated>2018-09-28T08:50:26.916Z</updated>
-  <id>https://basinmax.github.io/basin.github.io/</id>
+  <id>https://basinmax.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/"/>
-    <id>https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/</id>
+    <link href="https://basinmax.github.io/2018/09/28/hello-world/"/>
+    <id>https://basinmax.github.io/2018/09/28/hello-world/</id>
     <published>2018-09-28T08:50:26.915Z</published>
     <updated>2018-09-28T08:50:26.916Z</updated>
     
