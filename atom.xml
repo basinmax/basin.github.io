@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>WANGHC</title>
+  <title>Hexo</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://basinmax.github.io/basin.github.io/"/>
   <updated>2018-09-28T08:50:26.916Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://basinmax.github.io/basin.github.io/</id>
   
   <author>
-    <name>WANGHC</name>
+    <name>John Doe</name>
     
   </author>
   
-  <generator>WANGHC</generator>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/09/28/hello-world/"/>
-    <id>http://yoursite.com/2018/09/28/hello-world/</id>
+    <link href="https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/</id>
     <published>2018-09-28T08:50:26.915Z</published>
     <updated>2018-09-28T08:50:26.916Z</updated>
     
