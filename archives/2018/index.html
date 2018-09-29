@@ -40,7 +40,9 @@
 
 </head>
 
+	
 <body>
+	
     <div id="loading" class="active"></div>
 
     <aside id="menu"  >
@@ -51,7 +53,7 @@
     <div class="brand-wrap" style="background-image:url(/basin.github.io/img/brand.jpg)">
       <div class="brand">
         <a href="/basin.github.io/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/basin.github.io/img/avatar.jpg">
+          <img src="/basin.github.io/img/author.png">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">有想法的程序猿</h5>
@@ -157,7 +159,7 @@
 
 <div class="container body-wrap fade">
     
-
+	
     
             
             <h3 class="archive-separator">September, 2018</h3>
@@ -200,6 +202,7 @@
     
 </div>
 
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=496869422&auto=1&height=32"></iframe>
         <footer class="footer">
     <div class="top">
         
@@ -221,7 +224,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>有想法的程序猿 &copy; 2015 - 2018</span>
+        <p><span>有想法的程序猿 &copy; 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
@@ -239,7 +242,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/archives/2018/&title=曾梦想仗剑走天涯，因为太胖放弃了计划&pic=https://basinmax.github.io/basin.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/archives/2018/&title=曾梦想仗剑走天涯，因为太胖放弃了计划&pic=https://basinmax.github.io/basin.github.io/img/author.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -324,10 +327,10 @@ var BLOG = { ROOT: '/basin.github.io/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '产品又改需求啦~';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '(つェ⊂)逗你的啦～';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
@@ -338,5 +341,6 @@ var BLOG = { ROOT: '/basin.github.io/', SHARE: true, REWARD: false };
 
 
 
-</body>
+		{{ live2d() }}
+<script src="/basin.github.io/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/basin.github.io/live2dw/assets/unitychan.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
