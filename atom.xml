@@ -6,7 +6,7 @@
   <link href="/basin.github.io/atom.xml" rel="self"/>
   
   <link href="https://basinmax.github.io/basin.github.io/"/>
-  <updated>2018-09-28T08:50:26.916Z</updated>
+  <updated>2018-09-29T03:12:04.700Z</updated>
   <id>https://basinmax.github.io/basin.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/"/>
-    <id>https://basinmax.github.io/basin.github.io/2018/09/28/hello-world/</id>
-    <published>2018-09-28T08:50:26.915Z</published>
-    <updated>2018-09-28T08:50:26.916Z</updated>
+    <title>Hello Hexo</title>
+    <link href="https://basinmax.github.io/basin.github.io/2018/09/29/hello-world/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/09/29/hello-world/</id>
+    <published>2018-09-29T02:38:00.000Z</published>
+    <updated>2018-09-29T03:12:04.700Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,14 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;Hexo&quot;&gt;&lt;a href=&quot;#Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hexo&quot;&gt;&lt;/a&gt;Hexo&lt;/h1&gt;&lt;p&gt; 
         
       
     
     </summary>
     
+    
+      <category term="hexo" scheme="https://basinmax.github.io/basin.github.io/tags/hexo/"/>
     
   </entry>
   
