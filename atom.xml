@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>曾梦想仗剑走天涯，因为太胖放弃了计划</title>
+  <title>Talk is cheap.Show me the code.</title>
   
   
   <link href="/basin.github.io/atom.xml" rel="self"/>
   
   <link href="https://basinmax.github.io/basin.github.io/"/>
-  <updated>2018-09-29T06:51:53.377Z</updated>
+  <updated>2018-09-30T02:29:13.994Z</updated>
   <id>https://basinmax.github.io/basin.github.io/</id>
   
   <author>
-    <name>有想法的程序猿</name>
+    <name>basinMax</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git</title>
+    <link href="https://basinmax.github.io/basin.github.io/2018/09/30/it/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/09/30/it/</id>
+    <published>2018-09-30T01:40:00.000Z</published>
+    <updated>2018-09-30T02:29:13.994Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h1&gt;&lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://basinmax.github.io/basin.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello Hexo</title>
