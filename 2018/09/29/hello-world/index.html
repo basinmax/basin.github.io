@@ -45,7 +45,18 @@
 
 </head>
 
-	
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+    @media screen and (max-device-width: 400px) {
+        #aplayer {
+            width: 100%;
+        }
+    }
+</style>	
 <body>
 	
     <div id="loading" class="active"></div>
@@ -111,13 +122,6 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/basin.github.io/custom"  >
-                <i class="icon icon-lg icon-link"></i>
-                测试
-              </a>
-            </li>
-        
       </ul>
     </div>
   </div>
@@ -135,7 +139,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -238,7 +242,7 @@ $ hexo s
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-09-29T06:51:53.377Z" itemprop="dateUpdated">2018-09-29 14:51:53</time>
+    Last updated: <time datetime="2018-09-29T06:51:53.377Z" itemprop="dateUpdated">2018-09-29 14:51:53</time>
 </span><br>
 
 
@@ -346,6 +350,30 @@ $ hexo s
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "aVbrMDfFHjRxWfKChXCDlP0r-gzGzoHsz",
+            appKey: "vzwYk19A5IXeFDCudh2GRkIj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
 
 
 
@@ -384,7 +412,6 @@ $ hexo s
 
 </div>
 
-			{% aplayerlist %}{"narrow": false,"autoplay": true,"showlrc": 3,"mode": "random","music": [{"title": "平凡之路","author": "朴树","url": "http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3","pic": "https://ogd99kckh.qnssl.com/1.jpg","lrc": "http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.txt"},{"title": "野子","author": "苏运莹","url": "http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a","pic": "http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg","lrc":"https://ogd99kckh.qnssl.com/%E9%87%8E%E5%AD%90.txt"}]}{% endaplayerlist %}
         <footer class="footer">
     <div class="top">
         
@@ -402,7 +429,7 @@ $ hexo s
             
                 <span><a href="/basin.github.io/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -524,5 +551,7 @@ var BLOG = { ROOT: '/basin.github.io/', SHARE: true, REWARD: true };
 
 
 		{{ live2d() }}
+
+
 <script src="/basin.github.io/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/basin.github.io/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
