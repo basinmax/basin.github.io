@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Dependencies cycle between actuator and spring-data-jpa | Talk is cheap.Show me the code.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="APPLICATION FAILED TO START ***************************  Description:  The dependencies of some of the beans in the application context form a cycle:     servletEndpointRegistrar defined in class pat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dependencies cycle between actuator and spring-data-jpa">
+<meta property="og:url" content="https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/index.html">
+<meta property="og:site_name" content="Talk is cheap.Show me the code.">
+<meta property="og:description" content="APPLICATION FAILED TO START ***************************  Description:  The dependencies of some of the beans in the application context form a cycle:     servletEndpointRegistrar defined in class pat">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https://basinmax.github.io/basin.github.io/images/pasted-3.png">
+<meta property="og:updated_time" content="2018-11-14T02:18:18.516Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dependencies cycle between actuator and spring-data-jpa">
+<meta name="twitter:description" content="APPLICATION FAILED TO START ***************************  Description:  The dependencies of some of the beans in the application context form a cycle:     servletEndpointRegistrar defined in class pat">
+<meta name="twitter:image" content="https://basinmax.github.io/basin.github.io/images/pasted-3.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Talk is cheap.Show me the code." href="/basin.github.io/atom.xml">
+    
+    <link rel="shortcut icon" href="/basin.github.io/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+    @media screen and (max-device-width: 400px) {
+        #aplayer {
+            width: 100%;
+        }
+    }
+</style>	
+<body>
+	
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/basin.github.io/img/brand.jpg)">
+      <div class="brand">
+        <a href="/basin.github.io/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/basin.github.io/img/author.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">basinMax</h5>
+          <a href="mailto:1139882903@qq.com" title="1139882903@qq.com" class="mail">1139882903@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/归档"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/basinmax/basin.github.io/" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/3883591958" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微了个博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" style=" border-radius: 110px;" width=250 height=110 src="//music.163.com/outchain/player?type=0&id=2378915151&auto=1&height=90"></iframe>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Dependencies cycle between actuator and spring-data-jpa</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Dependencies cycle between actuator and spring-data-jpa</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-14T02:12:16.000Z" itemprop="datePublished" class="page-time">
+  2018-11-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在框架下的pom-xml中将spring-boot-starter-parent的版本变更为2-0-2-RELEASE"><span class="post-toc-number">1.</span> <span class="post-toc-text">在框架下的pom.xml中将spring-boot-starter-parent的版本变更为2.0.2.RELEASE</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-ependencies-cycle-between-actuator-and-spring-data-jpa"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Dependencies cycle between actuator and spring-data-jpa</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-14 10:12:16" datetime="2018-11-14T02:12:16.000Z"  itemprop="datePublished">2018-11-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
+<pre><code>APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   servletEndpointRegistrar defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration.class]
+      ↓
+   healthEndpoint defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]
+      ↓
+   org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorAutoConfiguration
+┌─────┐
+|  dataSource
+↑     ↓
+|  scopedTarget.dataSource defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker
+└─────┘
+</code></pre><h4 id="在框架下的pom-xml中将spring-boot-starter-parent的版本变更为2-0-2-RELEASE"><a href="#在框架下的pom-xml中将spring-boot-starter-parent的版本变更为2-0-2-RELEASE" class="headerlink" title="在框架下的pom.xml中将spring-boot-starter-parent的版本变更为2.0.2.RELEASE"></a>在框架下的pom.xml中将spring-boot-starter-parent的版本变更为2.0.2.RELEASE</h4><p><img src="\basin.github.io\images\pasted-3.png" alt="upload successful"></p>
+<p>等待编译maven重新加载后就完美解决了.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-11-14T02:18:18.516Z" itemprop="dateUpdated">2018-11-14 10:18:18</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" target="_blank" rel="external">https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://basinmax.github.io/basin.github.io">
+            <img src="/basin.github.io/img/author.png" alt="basinMax">
+            basinMax
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&title=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&pic=https://basinmax.github.io/basin.github.io/img/author.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&title=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&via=https://basinmax.github.io/basin.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/basin.github.io/2018/10/20/IONIC-ANGULAR/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">IONIC&amp;ANGULAR&amp;Cordova</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'true' == 'true',
+            appId: "aVbrMDfFHjRxWfKChXCDlP0r-gzGzoHsz",
+            appKey: "vzwYk19A5IXeFDCudh2GRkIj",
+            avatar: "mm",
+            placeholder: "说点啥呗",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/basin.github.io/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/basin.github.io/img/wechat.jpg" data-alipay="/basin.github.io/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/basin.github.io/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>basinMax &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&title=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&pic=https://basinmax.github.io/basin.github.io/img/author.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&title=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Dependencies cycle between actuator and spring-data-jpa》 — Talk is cheap.Show me the code.&url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/&via=https://basinmax.github.io/basin.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD4ElEQVR42u3aS27jQAwFwNz/0pltgIyd90jaE2BKq8CRWq3SguLn4yM+Pr8cX3/5/t/Z7/m133eV7PD4wIEDBw4c8aMmm3u+oXzTyZq3NMndceDAgQPHFUdyg/2m680F+9wEXRw4cODA8Rs4EqZZYH5+1e29cODAgQPH7+G4Sv9mlbpN6ogDBw4cON7JkTxSctVtsypJz5L9vKRWigMHDhw45vGuTud+298vme/AgQMHDhxlArYPWknBri0I5k2p+ulw4MCBA8eaIw9Is4GDWZqUJ5OboYqHO8SBAwcOHAuOvGyXl9VmJcXZsMJ+hSJPxYEDBw4cAccsOM1qa5uWUnJt8tEQNdVw4MCBA8eao704D8abVC1/VUkJMilQ4sCBAweOPccm4OW3bwNhHmL3raaHVVIcOHDgwLHgaEcK2s0lj7oZldh8EAy/LHDgwIEDx1OOtkS4LyC22eRVs+qHXeHAgQMHjiOOvC2UJHItaBvg85jYcuPAgQMHjvdwtI901XBqRxz2o3U4cODAgWPPMWsytQ2kPPS2Jb+2ZRV9RuDAgQMHjgXHbNAtbxQlyWFbiGw/AoohDBw4cODAsebYjxTkBbu2nJes3xYcV50xHDhw4MARcFyNJmx+mbWm6pJfcC0OHDhw4NhztDe73WgbbtsRirytVVRDceDAgQPHU4781Ha7Sb9r9t+24VSsgAMHDhw4jjjakYL9sEK+fptS5iMROHDgwIHjdRyb4tom9OZluzbJnPHhwIEDB45bjuQhN0yvuPZ4UA8HDhw4cKw5ZgT5+a9oHd2SPWw+4cCBAweOEcdsmGAT3tqi3iZg1wEeBw4cOHCsOdqBgDYMJ+vPKD/jo04OceDAgQPHzdTBcIuz5tBzsuScfGBitiYOHDhw4Jit2Wo9D115Kyt6M4tGVLKTv5yDAwcOHDhexnE14pA3mZIX017brokDBw4cOK44kuCXn9kW7/JXko87zEIyDhw4cOB4NUcbUDflvDwobtB/uC8OHDhw4DjlmBX1ZsW+NpS2La7hLzhw4MCB44hjtvXNVdGYWsyxL1Z+XD0YDhw4cPz3HPsg144y7JtVbQExvwsOHDhw4Nhz3DaHkkRrk5LN7lWkfDhw4MCBY82RH/nSefBLQvLz3+uRhTyRw4EDBw4cC4628T87vyXOH3UWhos3jwMHDhw4RhyzQNgGtrZ414b2g08HHDhw4MDxdo6kyZQXEOsu2Sjw180nHDhw4MDxTzluQ2+bOuapXbQHHDhw4MBxxJEU+67G6ZK0cHZmnnA+/C8OHDhw4Fhz7Hsxm2NGMxuDS+6OAwcOHDgWHH8ASDKRA6RKZPgAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/basin.github.io/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '产品又改需求啦~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)逗你的啦～';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+		{{ live2d() }}
+
+
+<script src="/basin.github.io/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/basin.github.io/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

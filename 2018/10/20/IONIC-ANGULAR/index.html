@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>IONIC&amp;ANGULAR&amp;Cordova | Talk is cheap.Show me the code.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Ionic &amp;amp; Angular.js&amp;amp;Cordova版本：ionic -v:4.1.1 cordova -v :7.0.1 特定的cordova版本 npm install -g ionic cordova@7.0.1 1.用到ionic的标签可在下面网站查阅https://ionicframework.com/docs/components/ 2.start：跟html类似 同样">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IONIC&amp;ANGULAR&amp;Cordova">
+<meta property="og:url" content="https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/index.html">
+<meta property="og:site_name" content="Talk is cheap.Show me the code.">
+<meta property="og:description" content="Ionic &amp;amp; Angular.js&amp;amp;Cordova版本：ionic -v:4.1.1 cordova -v :7.0.1 特定的cordova版本 npm install -g ionic cordova@7.0.1 1.用到ionic的标签可在下面网站查阅https://ionicframework.com/docs/components/ 2.start：跟html类似 同样">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2018-10-20T01:36:28.143Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IONIC&amp;ANGULAR&amp;Cordova">
+<meta name="twitter:description" content="Ionic &amp;amp; Angular.js&amp;amp;Cordova版本：ionic -v:4.1.1 cordova -v :7.0.1 特定的cordova版本 npm install -g ionic cordova@7.0.1 1.用到ionic的标签可在下面网站查阅https://ionicframework.com/docs/components/ 2.start：跟html类似 同样">
+    
+        <link rel="alternate" type="application/atom+xml" title="Talk is cheap.Show me the code." href="/basin.github.io/atom.xml">
+    
+    <link rel="shortcut icon" href="/basin.github.io/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+    @media screen and (max-device-width: 400px) {
+        #aplayer {
+            width: 100%;
+        }
+    }
+</style>	
+<body>
+	
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/basin.github.io/img/brand.jpg)">
+      <div class="brand">
+        <a href="/basin.github.io/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/basin.github.io/img/author.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">basinMax</h5>
+          <a href="mailto:1139882903@qq.com" title="1139882903@qq.com" class="mail">1139882903@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/归档"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/basin.github.io/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/basinmax/basin.github.io/" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/3883591958" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微了个博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" style=" border-radius: 110px;" width=250 height=110 src="//music.163.com/outchain/player?type=0&id=2378915151&auto=1&height=90"></iframe>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">IONIC&amp;ANGULAR&amp;Cordova</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">IONIC&amp;ANGULAR&amp;Cordova</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-20T00:52:57.000Z" itemprop="datePublished" class="page-time">
+  2018-10-20
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Ionic-amp-Angular-js-amp-Cordova"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ionic &amp; Angular.js&amp;Cordova</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#版本："><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">版本：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-用到ionic的标签可在下面网站查阅"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">1.用到ionic的标签可在下面网站查阅</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-start："><span class="post-toc-number">1.0.0.3.</span> <span class="post-toc-text">2.start：</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-IONIC-ANGULAR"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">IONIC&ANGULAR&Cordova</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-20 08:52:57" datetime="2018-10-20T00:52:57.000Z"  itemprop="datePublished">2018-10-20</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Ionic-amp-Angular-js-amp-Cordova"><a href="#Ionic-amp-Angular-js-amp-Cordova" class="headerlink" title="Ionic &amp; Angular.js&amp;Cordova"></a>Ionic &amp; Angular.js&amp;Cordova</h1><h4 id="版本："><a href="#版本：" class="headerlink" title="版本："></a>版本：</h4><p>ionic -v:4.1.1</p>
+<p>cordova -v :7.0.1</p>
+<p>特定的cordova版本</p>
+<pre><code>npm install -g ionic cordova@7.0.1
+</code></pre><h4 id="1-用到ionic的标签可在下面网站查阅"><a href="#1-用到ionic的标签可在下面网站查阅" class="headerlink" title="1.用到ionic的标签可在下面网站查阅"></a>1.用到ionic的标签可在下面网站查阅</h4><pre><code>https://ionicframework.com/docs/components/
+</code></pre><h4 id="2-start："><a href="#2-start：" class="headerlink" title="2.start："></a>2.start：</h4><p>跟html类似 同样分为：头部，中部，尾部，分别对应下面的header content footer。</p>
+<pre><code>&lt;ion-header&gt;&lt;/ion-header&gt;
+&lt;ion-content&gt;&lt;/ion-content&gt;
+&lt;ion-footer&gt;&lt;/ion-footer&gt;
+</code></pre><p>头部：</p>
+<pre><code>&lt;ion-header no-border&gt;
+    &lt;ion-navbar&gt;
+       &lt;span&gt;
+            &lt;h3&gt;我的简介&lt;/h3&gt;
+        &lt;/span&gt;
+    &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+</code></pre><p>代码如上 则可以生成一个头部 也可根据需求来变更文字显示的位置。</p>
+<p>中部：</p>
+<pre><code>&lt;ion-content&gt;
+    &lt;ion-gird&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col col-12 text-center&gt;
+              &lt;button ion-button color=&quot;danger&quot; (click)=&quot;save()&quot;&gt;保存&lt;/button&gt;
+          &lt;/ion-col&gt;
+       &lt;/ion-row&gt;
+   &lt;/ion-grid&gt;
+&lt;/ion-content&gt;
+</code></pre><p>content中可加入很多内容如list 如图片轮播 如栅栏等。此处不一一列举。<br>可参考1中的链接。</p>
+<p>尾部：</p>
+<p>现在用到的尾部为</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-10-20T01:36:28.143Z" itemprop="dateUpdated">2018-10-20 09:36:28</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/basin.github.io/2018/10/20/IONIC-ANGULAR/" target="_blank" rel="external">https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://basinmax.github.io/basin.github.io">
+            <img src="/basin.github.io/img/author.png" alt="basinMax">
+            basinMax
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&title=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&pic=https://basinmax.github.io/basin.github.io/img/author.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&title=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&via=https://basinmax.github.io/basin.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Dependencies cycle between actuator and spring-data-jpa</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/basin.github.io/2018/09/30/it/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Git</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'true' == 'true',
+            appId: "aVbrMDfFHjRxWfKChXCDlP0r-gzGzoHsz",
+            appKey: "vzwYk19A5IXeFDCudh2GRkIj",
+            avatar: "mm",
+            placeholder: "说点啥呗",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/basin.github.io/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/basin.github.io/img/wechat.jpg" data-alipay="/basin.github.io/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/basin.github.io/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>basinMax &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&title=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&pic=https://basinmax.github.io/basin.github.io/img/author.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&title=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《IONIC&ANGULAR&Cordova》 — Talk is cheap.Show me the code.&url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/&via=https://basinmax.github.io/basin.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACpUlEQVR42u3a3W6DMAwG0L7/S3fXU1X6+Seskw5XFTDIyaTE2H484uN5ebzek/zV6/2vb7w+s3bg4eHh3TL0yVuuz1/fmY8ZDw8P7zTvemmuDisZSj4R784k2wkeHh7eN/CqwXGCzKcPDw8P7z/ykjPzDQAPDw/v+3nVhbuacu1tDLfmWvDw8PA6ce8jAXzD7yP1PTw8PLxxVb264N5TJCuMFg8PD+8AL19wr6lJ+9R8S2hOMR4eHt4qLy/S99oCegmFJFEbTRkeHh7eAV41JdoLu6sNW71g/e1VPDw8vFVerxDVG3Q+uGQTKnwr4OHh4R3mlXeVQdks31SS0HyUV8bDw8Nr8fKP/MlCnz+nlyh5m2vBw8PDW+JVw9lei0Dv+dXN6e2o8PDw8FZ5eVlrq1mqGi5PWrLw8PDwzvHyBEFydTJB842kEEzj4eHhtXh5QNyM1uOGg15idwGJh4eHV+T1gtrql/7WfJdLaHh4eHi38BLqJMytBuuT8hgeHh7eOV61iJWcyTeMSYL4w3vx8PDwDvCSh86X7N1AeSFAx8PDwxvzqkt23mrQC6ajcLnaU4aHh4d3gFd95bwYtrWbfdi08PDw8A7zkpRuvkwnr8+vJmU5PDw8vHt4VWQOrjYlVCf3+h48PDy8c7xeODshPeOjWnIr/Afw8PDwjvEmAW41/Zo3ChRSvXh4eHjHeNXfvXaoZOKSELxw4OHh4a3ynsUjWcqrIfJu4uPXVTw8PLwDvPkaOy99Jend3m88PDy8c7x8M9gqVlWvTkJ5PDw8vHO86qKcpxJ6QXMvmYKHh4f3nbzdcHzeRhCF1Hh4eHh/ystTEtVk7tYz8fDw8O7hbSUIqqmHvP2rGr7j4eHhneP1PvjzMLpaDJs8Z6HvDA8PD+/qb38AAh/5PvrTP6wAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/basin.github.io/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '产品又改需求啦~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)逗你的啦～';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+		{{ live2d() }}
+
+
+<script src="/basin.github.io/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/basin.github.io/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

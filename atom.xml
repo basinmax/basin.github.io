@@ -6,7 +6,7 @@
   <link href="/basin.github.io/atom.xml" rel="self"/>
   
   <link href="https://basinmax.github.io/basin.github.io/"/>
-  <updated>2018-09-30T02:29:13.994Z</updated>
+  <updated>2018-11-14T02:18:18.516Z</updated>
   <id>https://basinmax.github.io/basin.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dependencies cycle between actuator and spring-data-jpa</title>
+    <link href="https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/11/14/ependencies-cycle-between-actuator-and-spring-data-jpa/</id>
+    <published>2018-11-14T02:12:16.000Z</published>
+    <updated>2018-11-14T02:18:18.516Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\basin.github.io\assets\css\APlayer.min.css&quot;&gt;&lt;script
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IONIC&amp;ANGULAR&amp;Cordova</title>
+    <link href="https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/"/>
+    <id>https://basinmax.github.io/basin.github.io/2018/10/20/IONIC-ANGULAR/</id>
+    <published>2018-10-20T00:52:57.000Z</published>
+    <updated>2018-10-20T01:36:28.143Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\basin.github.io\assets\css\APlayer.min.css&quot;&gt;&lt;script
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Git</title>
